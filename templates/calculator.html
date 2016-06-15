@@ -1,0 +1,37 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'app/main.css'%}">
+</head>
+<body>
+<div class="container">
+<h2> Tootie's Calculator</h2>
+    <br> <h3>Do some calculations!</h3>
+<form action="" method="post">
+    {% csrf_token %}
+{{ form }}
+
+ <br>   <div class="btn-group">
+  <button type="button" class="btn btn-default btn-lg dropdown-toggle"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Action <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+<br>    <input type="submit" value="Submit">
+
+
+</form>
+
+</body>
+</html>
