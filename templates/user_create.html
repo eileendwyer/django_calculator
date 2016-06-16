@@ -1,0 +1,14 @@
+
+{ extends "calculator.html" %}
+{%  block content%}
+<h1>Create a username and password here</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit"  value="SIGN IN">
+    <p> Go here to login if already a user. <a href="{% url 'login_view' %}">Sign in here.</a></p>
+
+    </form>
+
+
+    {% endblock%}

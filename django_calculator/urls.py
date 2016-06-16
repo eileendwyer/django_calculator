@@ -20,5 +20,7 @@ from calculator_app import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.calculate_view, name='calculate')
+    url(r'^$', views.calculate_view, name='calculate'),
+    url(r'^$', views.login_view, name="login_view"),
+    url(r'^user_create/$', views.user_create_view, name="user_create_view"),
 ]
